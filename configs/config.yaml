@@ -1,0 +1,28 @@
+# Configuration for customer churn prediction project
+
+# Random seed for reproducibility
+random_seed: 42
+
+# Data paths
+data:
+  raw_path: "data/raw/telco_customer_churn.csv"
+  processed_path: "data/processed/"
+  
+# Data split ratios
+# Train: 60%, Validation: 20%, Test: 20%
+# Rationale: Standard split for medium-sized datasets (~7K rows)
+# Validation set used for hyperparameter tuning
+# Test set held out until final evaluation
+splitting:
+  train_ratio: 0.6
+  validation_ratio: 0.2
+  test_ratio: 0.2
+
+# Model artifacts
+models:
+  output_path: "models/"
+  
+# Target column
+target:
+  column_name: "Churn"
+  positive_class: "Yes"
